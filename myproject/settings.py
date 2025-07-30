@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'books',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -128,5 +129,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Vue와 연동하기 위한 CORS 설정
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
+    "http://localhost:5174",
 ]
+
+# Django User 모델 사용하기 위한 설정
+AUTH_USER_MODEL = 'users.User'
