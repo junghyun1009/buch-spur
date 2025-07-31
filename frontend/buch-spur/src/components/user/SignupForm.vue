@@ -10,7 +10,7 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
 import axios from 'axios'
 
@@ -21,7 +21,7 @@ const nickname = ref('')
 
 const handleSignup = async () =>{
     try {
-        const response = await axios.post('/signup/', {
+        const response = await axios.post('http://localhost:8000/api/signup/', {
             username: username.value,
             password: password.value,
             email: email.value,
@@ -29,6 +29,7 @@ const handleSignup = async () =>{
         })
         alert('회원가입이 완료되었습니다.')
     } catch (error) {
+        console.log(error)
         alert('회원가입을 실패하였습니다.')
     }
 }

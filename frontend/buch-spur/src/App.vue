@@ -1,19 +1,8 @@
 <template>
   <div id="app">
-    <BookList />
-    <SignupFrom />
+    <router-view></router-view>
   </div>
 </template>
 
-<script>
-import BookList from './components/BookList.vue'
-import SignupForm from './components/user/SignupForm.vue'
-
-export default {
-  name: 'App',
-  components: {
-    BookList,
-    SignupForm
-  }
-}
+<script setup>
 </script>
